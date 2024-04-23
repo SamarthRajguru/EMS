@@ -27,9 +27,9 @@ def forgot_password():
         db.session.commit()
 
         msg = Message(
-            "New Password", sender="your_email@example.com", recipients=[email]
+            "New Password", sender="samarthrajguru2@gmail.com", recipients=[user.email]
         )
-        msg.body = f"Dear Employee, \n\n\t\tYour password has been reset successfully. Below is your new password. \n\t\tNew Password: {new_password} \n\t\tFor security reasons, we recommend changing your password after logging in. \n\nThank you \nAlcyone Technologies"
+        msg.body = f"Dear Employee, \n\n\t\tYour password has been reset successfully. Below is your new password. \n\t\tNew Password: {new_password} \n\t\tFor security reasons, we recommend changing your password after logging in. \n\nThank you \Employee Managment System"
         mail.send(message=msg)
         return jsonify({"msg": "Email sent to your mail"})
 
